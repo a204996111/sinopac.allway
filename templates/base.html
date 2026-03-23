@@ -85,17 +85,31 @@
                         </svg>
                     </button>
                 </div>
-
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-sinopac-dark border-t border-gray-800 shadow-xl">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="/" class="block px-3 py-3 text-white hover:text-sinopac-red font-bold border-b border-gray-800">首頁</a>
-                <a href="/why_sinopac" class="block px-3 py-3 text-white hover:text-sinopac-red font-bold border-b border-gray-800">永豐金優勢</a>
-                <a href="/tools" class="block px-3 py-3 text-white hover:text-sinopac-red font-bold border-b border-gray-800">專屬工具</a>
-                <a href="/strategy" class="block px-3 py-3 text-white hover:text-sinopac-red font-bold border-b border-gray-800">策略觀念</a>
-                <a href="/market" class="block px-3 py-3 text-white hover:text-sinopac-red font-bold border-b border-gray-800">每日分析簡報</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-sinopac-dark border-t border-gray-800 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+            <div class="px-4 py-4 space-y-2">
+                <a href="/" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">首頁</a>
+                <a href="/why_sinopac" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">永豐金優勢</a>
+                <a href="/tools" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">專屬工具</a>
+                <a href="/strategy" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">策略觀念</a>
+                
+                <div class="border-t border-gray-800 pt-3 mt-3">
+                    <div class="px-4 py-1 text-gray-500 text-[11px] tracking-widest">市場消息</div>
+                    <a href="#" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">即時市場消息</a>
+                    <a href="/market" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">每日分析簡報</a>
+                </div>
+
+                <div class="border-t border-gray-800 pt-3 mt-3">
+                    <div class="px-4 py-1 text-gray-500 text-[11px] tracking-widest">客戶支援</div>
+                    <a href="#" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">最新消息</a>
+                    <a href="#" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">APP操作教學</a>
+                    <a href="#" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">基本問題</a>
+                    <a href="#" class="block px-4 py-3 text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8 flex justify-between items-center">
+                        台東專區 <span class="bg-sinopac-red text-white text-[10px] px-2 py-0.5 rounded-full">HOT</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -186,12 +200,20 @@
                 });
             }
 
-            // 手機版漢堡選單的開關邏輯
+            // 🚀 手機版漢堡選單的開關邏輯 (修改這裡確保不會亂跑)
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileBtn && mobileMenu) {
-                mobileBtn.addEventListener('click', function() {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // 防止點擊事件穿透
                     mobileMenu.classList.toggle('hidden');
+                });
+                
+                // 點擊選單以外的地方自動關閉
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 });
             }
         });

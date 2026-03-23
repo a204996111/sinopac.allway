@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">實戰策略觀念</h2>
+        <p class="mt-4 text-slate-500">透過 Python 數據回測，找出市場的交易慣性</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8">
+        <h3 class="text-2xl font-bold text-sinopac-red mb-4">微台指複合策略：MACD + RSI + EMA</h3>
+        <p class="text-slate-600 leading-relaxed mb-6">
+            我們利用 Python 撰寫了一套微台指的回測框架，將 EMA 作為大趨勢濾網，結合 MACD 的動能變化與 RSI 的超買超賣區間，打造出勝率與風報比更穩定的進出場邏輯。
+        </p>
+        <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 mb-6">
+            <h4 class="font-bold text-slate-800 mb-2">視覺化訊號設定：</h4>
+            <ul class="list-disc list-inside text-slate-600 space-y-2">
+                <li><span class="font-bold text-red-600">紅色訊號 (Red)：</span> 代表多頭確立，執行買進 (Buy)。</li>
+                <li><span class="font-bold text-green-600">綠色訊號 (Green)：</span> 代表空頭成型，執行賣出 (Sell)。</li>
+            </ul>
+        </div>
+        </div>
+</div>
+{% endblock %}

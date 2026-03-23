@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-slate-900">團隊專屬交易工具箱</h2>
+        <p class="mt-4 text-slate-500 text-lg">把複雜的計算與回測，交給我們開發的程式</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden flex flex-col hover:shadow-lg transition duration-300">
+            <div class="bg-[#111827] p-6 border-b-4 border-sinopac-red">
+                <h3 class="text-xl font-bold text-white flex items-center">
+                    <span class="mr-2">🧮</span> 股票損益與成本計算神器
+                </h3>
+            </div>
+            <div class="p-8 flex-grow flex flex-col justify-between">
+                <div>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        精準計算包含手續費折扣、證交稅在內的真實交易成本。介面簡單直觀，就連長輩也能輕鬆上手。只需輸入買進價格，系統自動算出「損益兩平點」，讓您清楚知道賣在什麼價位才不會賠錢。
+                    </p>
+                </div>
+                <a href="https://mom-stock.onrender.com/" target="_blank" class="w-full text-center bg-slate-100 text-slate-800 py-3 rounded-lg font-bold hover:bg-slate-200 transition border border-slate-300">
+                    開啟計算神器 ↗
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden flex flex-col hover:shadow-lg transition duration-300">
+            <div class="bg-[#111827] p-6 border-b-4 border-sinopac-red">
+                <h3 class="text-xl font-bold text-white flex items-center">
+                    <span class="mr-2">📈</span> 智慧策略回測系統
+                </h3>
+            </div>
+            <div class="p-8 flex-grow flex flex-col justify-between">
+                <div>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        不再憑感覺下單。這套我們自行開發的回測系統，整合了 MACD、RSI、EMA 等多項技術指標。透過歷史數據驗證，幫您找出微台指與台股市場中的交易慣性，建立更穩定的進出場濾網。
+                    </p>
+                </div>
+                <a href="https://allstock.onrender.com/" target="_blank" class="w-full text-center bg-slate-100 text-slate-800 py-3 rounded-lg font-bold hover:bg-slate-200 transition border border-slate-300">
+                    進入回測系統 ↗
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-16 bg-red-50 border border-red-100 rounded-xl p-8 text-center max-w-3xl mx-auto">
+        <p class="text-sinopac-red font-bold text-lg mb-2">想體驗更多進階交易功能？</p>
+        <p class="text-slate-700 mb-6">現在透過永豐全方way團隊開戶，免費獲取最新開發的 VIP 交易工具與策略教學！</p>
+        <a href="/open_account" target="_blank" class="inline-block bg-sinopac-red text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition shadow">
+            立即線上開戶
+        </a>
+    </div>
+</div>
+{% endblock %}

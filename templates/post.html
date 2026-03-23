@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .markdown-content img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+        margin: 1.5rem auto;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    .markdown-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #334155;
+        font-size: 1.125rem;
+    }
+    .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+        font-weight: 800;
+        color: #0f172a;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+</style>
+
+<div class="w-full bg-slate-50 py-6 border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+        <a href="/market" class="text-slate-500 hover:text-sinopac-red font-bold flex items-center transition bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200">
+            <span class="mr-2">←</span> 返回簡報列表
+        </a>
+        <span class="bg-sinopac-red text-white text-sm font-bold px-3 py-1 rounded-full">每日簡報</span>
+    </div>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="bg-slate-900 px-8 py-10 text-center border-b-4 border-sinopac-red">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">{{ post.title }} 市場簡報</h1>
+        </div>
+        
+        <div class="p-8 md:p-12 markdown-content">
+            {{ post.content | safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}

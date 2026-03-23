@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="w-full flex flex-col h-[calc(100vh-80px)]">
+    
+    <div class="swiper mySwiper w-full flex-1 h-0 bg-white">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide relative w-full h-full bg-slate-50">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-25">
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+                
+                <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+                    <span class="text-sinopac-red font-bold tracking-widest mb-4 uppercase text-xs border-2 border-sinopac-red px-4 py-1.5 rounded-full bg-white shadow-sm">永豐全方way Team</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
+                        在演算法的時代 <br>
+                        <span class="text-sinopac-red mt-2 block">你需要懂數據的交易團隊</span>
+                    </h1>
+                    <p class="text-slate-700 text-lg md:text-xl max-w-2xl mt-4 font-bold">
+                        南部首創數位化營業團隊。我們用 Python 數據回測與專屬數位工具，協助您建立理性的交易邏輯。
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide relative w-full h-full bg-white">
+                <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-white/70"></div>
+                
+                <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+                    <span class="text-sinopac-red font-bold tracking-widest mb-4 uppercase text-xs border-2 border-sinopac-red px-4 py-1.5 rounded-full bg-white shadow-sm">Exclusive Tools</span>
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4 tracking-tight">
+                        告別繁瑣 <span class="text-sinopac-red">專屬計算工具</span>
+                    </h2>
+                    <p class="text-slate-800 text-lg md:text-xl max-w-2xl mt-4 font-bold">
+                        自主開發股票成本、損益兩平點計算機，輸入價格一秒算出真實獲利，讓您精準掌握每一分交易成本。
+                    </p>
+                    <a href="/tools" class="mt-8 px-8 py-3 text-white bg-sinopac-red border border-transparent rounded-full font-bold hover:bg-red-700 shadow-md transition transform hover:-translate-y-1">
+                        體驗專屬工具箱
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="w-full bg-white relative z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                
+                <a href="/open_account" target="_blank" class="block py-2 hover:-translate-y-1 transition transform group cursor-pointer">
+                    <p class="text-sinopac-red font-extrabold text-2xl mb-2 group-hover:scale-105 transition">⚡ 極速開戶</p>
+                    <p class="text-slate-500 text-sm font-medium">全台線上數位零距離</p>
+                </a>
+                
+                <a href="/tools" class="block py-2 hover:-translate-y-1 transition transform group cursor-pointer">
+                    <p class="text-slate-800 font-extrabold text-2xl mb-2 group-hover:text-sinopac-red group-hover:scale-105 transition">🧮 專屬工具</p>
+                    <p class="text-slate-500 text-sm font-medium">精準計算真實交易損益</p>
+                </a>
+                
+                <a href="https://lin.ee/OSyslQw5" target="_blank" class="block py-2 hover:-translate-y-1 transition transform group cursor-pointer">
+                    <p class="text-slate-800 font-extrabold text-2xl mb-2 group-hover:text-[#00B900] group-hover:scale-105 transition">📍 專業服務</p>
+                    <p class="text-slate-500 text-sm font-medium">線上支援您所有的問題</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section class="w-full bg-sky-50 py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-16 justify-center">
+            
+            <div class="w-full md:w-4/12 flex justify-center md:justify-end">
+                <div class="w-56 h-56 md:w-64 md:h-64 bg-white rounded-full shadow-sm flex items-center justify-center p-8">
+                    <img src="{{ url_for('static', path='logo.jpg') }}" alt="團隊視覺 Logo" class="w-full h-full object-contain">
+                </div>
+            </div>
+            
+            <div class="w-full md:w-8/12">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">永豐金證券 <span class="text-sinopac-red">潮州分公司</span></h3>
+                <p class="text-slate-500 font-bold mb-6 text-sm tracking-wider uppercase border-l-4 border-sinopac-red pl-3">數位量化交易團隊</p>
+                <p class="text-slate-700 leading-relaxed mb-8 font-medium text-lg max-w-2xl">
+                    我們是由熟悉程式交易與市場實戰的專業服務團隊組成。結合了量化回測與策略開發，無論您是需要全台線上開戶的數位投資人，還是需要南部在地諮詢的鄉親，我們都能提供雙倍的資源與最即時的服務。
+                </p>
+                <div class="flex flex-wrap gap-3 mb-10">
+                    <span class="bg-white text-slate-700 px-4 py-2 rounded-md text-sm font-bold tracking-wider shadow-sm">台股/海外複委託</span>
+                    <span class="bg-white text-slate-700 px-4 py-2 rounded-md text-sm font-bold tracking-wider shadow-sm">期貨/微台指</span>
+                    <span class="bg-red-50 text-sinopac-red px-4 py-2 rounded-md text-sm font-bold tracking-wider border border-red-100 shadow-sm">量化交易工具</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="w-full bg-white py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-extrabold text-slate-900">專屬服務與社群</h3>
+            <p class="mt-4 text-slate-500 font-medium text-lg">全方位的數位支援，隨時為您解答</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+            
+            <div class="bg-slate-50 p-8 rounded-2xl space-y-8">
+                <div>
+                    <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mb-4">Official Contact</p>
+                    <div class="flex items-start">
+                        <span class="bg-slate-800 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 shadow-sm text-lg mt-1">📱</span>
+                        <div>
+                            <span class="font-bold text-slate-800 block text-lg mb-1">雙線服務專線</span>
+                            <span class="font-bold text-sinopac-red text-xl">0965-455-599</span><br>
+                            <span class="font-bold text-sinopac-red text-xl">0987-132-905</span><br>
+                            <span class="font-medium text-slate-500 text-sm mt-1 block">雙線確保通暢，為您提供最即時的服務。</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pt-4 border-t border-slate-200">
+                    <div class="flex items-start">
+                        <span class="bg-sinopac-red text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 shadow-sm text-lg mt-1">📍</span>
+                        <div>
+                            <span class="font-bold text-slate-800 block text-lg mb-1">潮州分公司</span>
+                            <span class="font-medium text-slate-600">920潮州鎮中正路<br>38之1號3樓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mb-4 ml-2">Social Media</p>
+                
+                <a href="https://lin.ee/OSyslQw5" target="_blank" class="flex items-center p-4 bg-slate-50 rounded-xl hover:bg-[#00B900]/10 transition group">
+                    <span class="bg-[#00B900] text-white w-12 h-12 rounded-lg flex items-center justify-center mr-5 shadow-sm text-2xl font-bold">L</span>
+                    <div class="flex-grow">
+                        <span class="font-bold text-slate-800 block">官方 LINE 帳號</span>
+                        <span class="text-sm text-slate-500">點擊加好友，即時真人客服</span>
+                    </div>
+                    <span class="text-[#00B900] opacity-0 group-hover:opacity-100 transition font-bold">加入 →</span>
+                </a>
+
+                <a href="https://www.instagram.com/sinopac.allway?igsh=eGJjYTJ2dXF0aGtk&utm_source=qr" target="_blank" class="flex items-center p-4 bg-slate-50 rounded-xl hover:bg-pink-50 transition group">
+                    <span class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mr-5 shadow-sm text-2xl font-bold">IG</span>
+                    <div class="flex-grow">
+                        <span class="font-bold text-slate-800 block">Instagram</span>
+                        <span class="text-sm text-slate-500">@sinopac.allway</span>
+                    </div>
+                    <span class="text-pink-500 opacity-0 group-hover:opacity-100 transition font-bold">追蹤 →</span>
+                </a>
+
+                <a href="https://www.facebook.com/share/1GrJBTUX32/?mibextid=wwXIfr" target="_blank" class="flex items-center p-4 bg-slate-50 rounded-xl hover:bg-[#1877F2]/10 transition group">
+                    <span class="bg-[#1877F2] text-white w-12 h-12 rounded-lg flex items-center justify-center mr-5 shadow-sm text-3xl font-bold">f</span>
+                    <div class="flex-grow">
+                        <span class="font-bold text-slate-800 block">Facebook 粉絲專頁</span>
+                        <span class="text-sm text-slate-500">永豐全方way</span>
+                    </div>
+                    <span class="text-[#1877F2] opacity-0 group-hover:opacity-100 transition font-bold">按讚 →</span>
+                </a>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="https://www.threads.com/@sinopac.allway?invite=0" target="_blank" class="flex items-center justify-center p-3 bg-slate-50 rounded-xl hover:bg-slate-900 hover:text-white transition text-slate-700 font-bold">
+                        Threads
+                    </a>
+                    <a href="https://www.dcard.tw/@sinopac_allway?cid=48e6242c-1dea-4416-b603-1bbde61599b4" target="_blank" class="flex items-center justify-center p-3 bg-slate-50 rounded-xl hover:bg-[#006AA6] hover:text-white transition text-slate-700 font-bold">
+                        Dcard
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

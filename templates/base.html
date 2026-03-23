@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}永豐全方way{% endblock %}</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://www.sinotrade.com.tw/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.sinotrade.com.tw/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .bg-sinopac-red { background-color: #E60012; }
+        .text-sinopac-red { color: #E60012; }
+        .bg-sinopac-dark { background-color: #0B0F19; } 
+        
+        .swiper-button-next, .swiper-button-prev { color: #E60012 !important; }
+        .swiper-pagination-bullet { background-color: #cbd5e1 !important; opacity: 1 !important; }
+        .swiper-pagination-bullet-active { background-color: #E60012 !important; width: 24px !important; border-radius: 12px !important; transition: 0.3s; }
+    </style>
+</head>
+<body id="top" class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen relative">
+
+    <nav class="bg-sinopac-dark shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 w-full"> 
+                
+                <div class="flex items-center flex-shrink-0 py-1">
+                    <a href="/" class="flex items-center group">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 mr-3 shadow-lg group-hover:scale-105 transition">
+                            <img src="{{ url_for('static', path='logo.jpg') }}" alt="永豐全方way Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-2xl font-bold text-white tracking-wider leading-none mb-1">永豐全方way</span>
+                            <span class="text-[10px] font-bold text-white tracking-widest uppercase leading-none">sinopac.allway</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex flex-grow justify-center space-x-8 text-xl">
+                    <a href="/" class="text-white hover:text-sinopac-red font-bold tracking-wide transition flex items-center">首頁</a>
+                    <a href="/why_sinopac" class="text-white hover:text-sinopac-red font-bold tracking-wide transition flex items-center">永豐金優勢</a>
+                    <a href="/tools" class="text-white hover:text-sinopac-red font-bold tracking-wide transition flex items-center">專屬工具</a>
+                    <a href="/strategy" class="text-white hover:text-sinopac-red font-bold tracking-wide transition flex items-center">策略觀念</a>
+                    
+                    <div class="relative group flex items-center h-20 cursor-pointer">
+                        <span class="text-white group-hover:text-sinopac-red font-bold tracking-wide transition flex items-center">
+                            市場消息 <span class="ml-1 text-sm">▼</span>
+                        </span>
+                        <div class="absolute top-[70px] left-1/2 -translate-x-1/2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden border-t-4 border-sinopac-red text-base">
+                            <a href="#" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">即時市場消息</a>
+                            <a href="/market" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold transition">每日分析簡報</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group flex items-center h-20 cursor-pointer">
+                        <span class="text-white group-hover:text-sinopac-red font-bold tracking-wide transition flex items-center">
+                            客戶支援 <span class="ml-1 text-sm">▼</span>
+                        </span>
+                        <div class="absolute top-[70px] left-1/2 -translate-x-1/2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden border-t-4 border-sinopac-red text-base">
+                            <a href="#" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">最新消息</a>
+                            <a href="#" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">APP操作教學</a>
+                            <a href="#" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">基本問題</a>
+                            <a href="#" class="block px-5 py-3 bg-red-50 text-sinopac-red hover:bg-red-100 font-bold transition flex items-center justify-between">
+                                台東專區 <span class="text-[10px] bg-sinopac-red text-white px-2 py-0.5 rounded-full tracking-wider">HOT</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center flex-shrink-0">
+                    <a href="/open_account" target="_blank" class="bg-sinopac-red text-white px-6 py-2 rounded-full font-bold tracking-wide shadow-md hover:bg-red-700 transition transform hover:scale-105 text-lg">
+                        線上開戶
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2 pr-2">
+        <a href="tel:0965455599" class="bg-sinopac-red text-white w-12 h-12 flex items-center justify-center rounded-l-xl shadow-lg hover:w-14 transition-all duration-300 group relative">
+            <span class="text-xl">📞</span>
+            <span class="absolute right-14 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition pointer-events-none">撥打電話</span>
+        </a>
+        <a href="https://lin.ee/OSyslQw5" target="_blank" class="bg-[#00B900] text-white w-12 h-12 flex items-center justify-center rounded-l-xl shadow-lg hover:w-14 transition-all duration-300 group relative">
+            <span class="text-xl font-bold">L</span>
+            <span class="absolute right-14 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition pointer-events-none">官方 LINE</span>
+        </a>
+        <a href="https://www.facebook.com/share/1GrJBTUX32/?mibextid=wwXIfr" target="_blank" class="bg-[#1877F2] text-white w-12 h-12 flex items-center justify-center rounded-l-xl shadow-lg hover:w-14 transition-all duration-300 group relative">
+            <span class="text-xl font-bold">f</span>
+            <span class="absolute right-14 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition pointer-events-none">粉絲專頁</span>
+        </a>
+        <a href="#top" class="bg-slate-700 text-white w-12 h-12 flex flex-col items-center justify-center rounded-l-xl shadow-lg hover:w-14 hover:bg-slate-900 transition-all duration-300 mt-4 group relative">
+            <span class="text-lg font-black leading-none mt-1">↑</span>
+            <span class="text-[10px] font-bold leading-none mb-1">TOP</span>
+        </a>
+    </div>
+
+    <main class="pt-20 flex-grow"> 
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-sinopac-dark text-gray-300 pt-12 pb-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-gray-800 pb-8">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold text-white mb-1 tracking-widest">
+                        永豐<span class="text-sinopac-red">全方way</span>
+                    </h2>
+                    <p class="text-gray-500 text-sm mt-1 uppercase tracking-widest text-white">sinopac.allway</p>
+                </div>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center">
+                        <span class="bg-white text-black w-6 h-6 rounded-full flex items-center justify-center mr-3 font-bold text-xs">📱</span>
+                        <span>服務專線 - 0965-455-599 / 0987-132-905</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="bg-[#00B900] text-white w-6 h-6 rounded-full flex items-center justify-center mr-3 font-bold text-xs">L</span>
+                        <span>官方LINE - @560ijeuy</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="bg-white text-black w-6 h-6 rounded-full flex items-center justify-center mr-3 font-bold text-xs">📍</span>
+                        <span>地址 - 潮州鎮中正路38之1號3樓</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between text-xs text-gray-600">
+                <p>113年金管證總字第0044號(永豐金證券) ｜ 111年金管期總字第007號(委任期貨商永豐期貨)</p>
+                <p class="mt-2 md:mt-0 text-white">ALL RIGHTS RESERVED. 永豐全方WAY TEAM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.querySelector('.mySwiper')) {
+                var swiper = new Swiper(".mySwiper", {
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                    effect: "fade", 
+                    autoplay: { delay: 5000, disableOnInteraction: false },
+                    pagination: { el: ".swiper-pagination", clickable: true },
+                    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+                    loop: true
+                });
+            }
+        });
+    </script>
+</body>
+</html>

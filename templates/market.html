@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="w-full bg-slate-900 py-16 border-b-4 border-sinopac-red">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">每日市場分析與簡報</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">點擊日期查看當日團隊觀點、籌碼追蹤與市場重大事件</p>
+    </div>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        {% if posts %}
+            {% for post in posts %}
+            <a href="/market/{{ post.title }}" class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex items-center justify-between hover:shadow-md hover:border-sinopac-red transition group">
+                <div class="flex items-center">
+                    <span class="bg-red-50 text-sinopac-red text-2xl p-3 rounded-xl mr-4 group-hover:bg-sinopac-red group-hover:text-white transition">📅</span>
+                    <div>
+                        <span class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1 block">Daily Report</span>
+                        <span class="text-xl font-extrabold text-slate-800">{{ post.title }} 市場簡報</span>
+                    </div>
+                </div>
+                <span class="text-slate-300 group-hover:text-sinopac-red font-bold text-xl transition">→</span>
+            </a>
+            {% endfor %}
+        {% else %}
+            <div class="col-span-full text-center py-20 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
+                <span class="text-4xl block mb-4">📰</span>
+                <h3 class="text-xl font-bold text-slate-600">目前尚無分析簡報</h3>
+                <p class="text-slate-500 mt-2">請在 posts 資料夾中加入 .md 檔案來發布文章！</p>
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

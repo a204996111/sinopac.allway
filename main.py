@@ -8,21 +8,20 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# 修正靜態檔案路徑與模板路徑，確保在 Render 環境能精準讀取
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 
-# 你的開戶連結與輪詢系統
 ACCOUNT_LINKS = [
     "https://www.sinotrade.com.tw/openact?strProd=0072&strWeb=0098&s=013448", # 陳巍
     "https://www.sinotrade.com.tw/openact?strProd=0072&strWeb=0098&s=013324"  # 呈偉
 ]
+
 counter = 0
 
 @app.get("/open_account")
 async def open_account():
     global counter
-    link = ACCOUNT_LINKS[counter % 2]
+    link = ACCOUNT_LINKS[counter % len(ACCOUNT_LINKS)]
     counter += 1
     return RedirectResponse(url=link)
 
@@ -31,9 +30,7 @@ def get_market_posts():
     posts_dir = os.path.join(BASE_DIR, "posts")
     if not os.path.exists(posts_dir):
         return []
-
     posts = []
-    # 自動讀取 posts 裡面所有的 .md 檔案，並依檔名倒序排列
     for filename in sorted(os.listdir(posts_dir), reverse=True):
         if filename.endswith(".md"):
             date_title = filename.replace(".md", "")
@@ -49,8 +46,6 @@ def get_single_post(date_str):
         html_content = markdown.markdown(text)
         return {"title": date_str, "content": html_content}
 # =======================================
-
-# --- 以下為修正後的 TemplateResponse 寫法 ---
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
@@ -83,6 +78,15 @@ async def tools(request: Request):
 @app.get("/about", response_class=HTMLResponse)
 async def about(request: Request):
     return templates.TemplateResponse(request=request, name="about.html")
+
+@app.get("/taitung", response_class=HTMLResponse)
+async def taitung(request: Request):
+    return templates.TemplateResponse(request=request, name="taitung.html")
+
+# 🚀 新增的「最新消息」路由
+@app.get("/news", response_class=HTMLResponse)
+async def news(request: Request):
+    return templates.TemplateResponse(request=request, name="news.html")
 
 if __name__ == "__main__":
     import uvicorn

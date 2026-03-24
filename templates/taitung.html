@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}永豐全方way - 台東專區｜線上開戶與揪團服務{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+            <span class="bg-red-100 text-red-600 font-bold px-4 py-1 rounded-full text-sm tracking-wider mb-4 inline-block">🎯 台東鄉親專屬企劃</span>
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                台東沒有永豐金？<br>
+                <span class="text-sinopac-red">我們把「量化交易團隊」直接搬到你面前！</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                距離從來不是問題，專業才是。我們是鄰近屏東潮州的數位化營業團隊，無論您在台東市還是縱谷線，都能享受無時差的頂級線上服務。
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+                <div class="w-12 h-12 bg-red-100 text-sinopac-red rounded-full flex items-center justify-center text-2xl mb-4 font-black">1</div>
+                <h3 class="text-xl font-bold mb-3">線上極速開戶</h3>
+                <p class="text-gray-500 text-sm">免出門、免寄件！透過專屬連結，手機 10 分鐘即可完成台股與海外複委託開戶，後續軟體操作我們全程線上帶你飛。</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+                <div class="w-12 h-12 bg-red-100 text-sinopac-red rounded-full flex items-center justify-center text-2xl mb-4 font-black">2</div>
+                <h3 class="text-xl font-bold mb-3">資料輔助決策</h3>
+                <p class="text-gray-500 text-sm">還在憑感覺買賣？我們利用 Python 回測與量化數據工具，提供你專屬的策略觀念與損益試算，讓數據成為你的後盾。</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition">
+                <div class="w-12 h-12 bg-red-100 text-sinopac-red rounded-full flex items-center justify-center text-2xl mb-4 font-black">3</div>
+                <h3 class="text-xl font-bold mb-3">找得到人的服務</h3>
+                <p class="text-gray-500 text-sm">我們不搞失蹤！遇到系統問題、大行情需要討論，我們的團隊專線與官方 LINE 隨時為你待命，比傳統分公司更即時。</p>
+            </div>
+        </div>
+
+        <div class="bg-sinopac-dark rounded-3xl p-8 md:p-12 text-center shadow-xl relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold text-white mb-6">🤝 台東親友揪團開戶，解鎖專屬 VIP 服務</h2>
+                
+                <div class="bg-gray-800/50 rounded-2xl p-6 text-gray-300 mb-8 max-w-2xl mx-auto space-y-5 text-left md:text-center border border-gray-700">
+                    <p class="leading-relaxed">
+                        <span class="text-sinopac-red font-bold text-lg inline-block mb-1">✨ 【3 人微揪團】：</span><br>
+                        只要台東地區 3 人以上「揪團線上開戶」，團隊將為你們開設專屬的「線上 Google Meet 新手起步與軟體教學」！
+                    </p>
+                    <div class="h-px bg-gray-700 w-full"></div>
+                    <p class="leading-relaxed">
+                        <span class="text-sinopac-red font-bold text-lg inline-block mb-1">🚀 【20 人大陣仗】：</span><br>
+                        若是企業行號、親友大揪團滿 20 人以上，<strong class="text-white border-b-2 border-sinopac-red pb-1">我們團隊直接買車票，親赴台東為你們舉辦實體開戶服務！</strong>並提供面對面的量化交易觀念教學。
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="/open_account" class="bg-white text-sinopac-dark font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition shadow-lg">
+                        👤 個人立即線上開戶
+                    </a>
+                    <a href="https://lin.ee/OSyslQw5" target="_blank" class="bg-[#00B900] text-white font-bold px-8 py-3 rounded-full hover:bg-green-600 transition shadow-lg flex items-center justify-center gap-2">
+                        <span class="text-xl font-bold">L</span> 預約台東揪團專案
+                    </a>
+                </div>
+                <p class="text-gray-500 text-xs mt-6">※ 點擊預約揪團，請於 LINE 傳送訊息：「我是台東人，想了解揪團開戶！」</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}最新消息 - 永豐全方way{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 py-16 min-h-[70vh]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="border-b-2 border-sinopac-red pb-4 mb-10 flex items-center justify-between">
+            <h1 class="text-3xl font-black text-gray-900">最新消息 <span class="text-lg text-gray-500 font-normal">News & Events</span></h1>
+        </div>
+
+        <div class="space-y-6">
+            
+            <a href="https://www.sinotrade.com.tw" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm border border-red-100 hover:shadow-md transition group relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-sinopac-red"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="bg-red-100 text-sinopac-red text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">熱門活動</span>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-sinopac-red transition">永豐金證券最新手續費優惠活動開跑！</h3>
+                        <p class="text-gray-500 mt-2 text-sm">點擊查看官網最新公告，了解當月專屬開戶好禮與交易回饋方案...</p>
+                    </div>
+                    <div class="text-gray-400 group-hover:text-sinopac-red font-bold text-sm whitespace-nowrap">
+                        查看詳情 ➔
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.sinotrade.com.tw" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition group relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-gray-300"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">系統公告</span>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-sinopac-red transition">大戶投 APP 最新版本更新通知</h3>
+                        <p class="text-gray-500 mt-2 text-sm">優化智慧單功能與美股報價系統，建議投資人盡速前往商店更新至最新版本。</p>
+                    </div>
+                    <div class="text-gray-400 group-hover:text-sinopac-red font-bold text-sm whitespace-nowrap">
+                        查看詳情 ➔
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        
+        <div class="mt-12 bg-blue-50 p-6 rounded-xl border border-blue-100 text-center">
+            <p class="text-blue-800 text-sm">💡 更多詳細活動辦法與規定，請依永豐金證券官方網站最新公告為準。</p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

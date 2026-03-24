@@ -1,88 +1,91 @@
 {% extends "base.html" %}
+{% block title %}永豐金優勢 - 永豐全方way{% endblock %}
 
 {% block content %}
-<div class="w-full bg-slate-900 py-24 border-b-4 border-sinopac-red">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-        <span class="text-sinopac-gold font-bold tracking-widest mb-4 uppercase text-sm border border-sinopac-gold px-4 py-1.5 rounded-full inline-block">Core Advantages</span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 mt-6 tracking-tight">為什麼選擇永豐金證券？</h1>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">我們結合了大型券商的頂級資源與在地團隊的專屬服務，為您打造最流暢的數位交易體驗。</p>
-    </div>
-</div>
-
-<div class="w-full bg-slate-50 py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 hover:shadow-md transition">
-            <div class="w-full md:w-1/3 flex justify-center">
-                <div class="w-32 h-32 bg-red-50 rounded-full flex items-center justify-center text-5xl">🏦</div>
-            </div>
-            <div class="w-full md:w-2/3">
-                <h3 class="text-2xl font-bold text-slate-900 mb-3">DAWHO 數位帳戶 ╳ 極速線上開戶</h3>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    申辦大戶數位帳戶，無條件享有兩個月最高 <span class="text-sinopac-red font-bold">30萬 1.5% 活儲高利</span> 及 20 次跨行轉帳優惠 [cite: 2, 4]。結合永豐線上開戶系統，手機即可上傳證件，免跑臨櫃 [cite: 11]。
-                </p>
-                <ul class="list-disc list-inside text-sm text-slate-500 space-y-1">
-                    <li>全台 45 家分公司皆可支援基本資料變更與業務辦理 [cite: 13, 15]。</li>
-                    <li>自動入金及換匯功能，資金調度最靈活 [cite: 18]。</li>
-                </ul>
-            </div>
+<div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 mb-4">為什麼選擇 <span class="text-sinopac-red">永豐金證券？</span></h1>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">不玩話術、不隱瞞。從開戶優惠到硬體系統，我們把大型券商的真實優勢與團隊的底氣，一次攤開給你看。</p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 hover:shadow-md transition">
-            <div class="w-full md:w-1/3 flex justify-center order-first md:order-last">
-                <div class="w-32 h-32 bg-blue-50 rounded-full flex items-center justify-center text-5xl">🇺🇸</div>
-            </div>
-            <div class="w-full md:w-2/3">
-                <h3 class="text-2xl font-bold text-slate-900 mb-3">美股即時報價 ╳ QI 稅務優勢</h3>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    免費申請「NASDAQ 美股即時報價」，看盤零延遲 [cite: 30, 31]。更具備美國國稅局「合格中介機構」(QI) 資格，自動處理退稅，面對國外利息所得 <span class="text-sinopac-red font-bold">免預扣 30%</span> [cite: 36]。
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-sinopac-red hover:shadow-xl transition">
+                <div class="text-4xl mb-4">🏦</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">DAWHO 數位帳戶特權</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    開戶完成即享 30 萬內活儲 1.5% 高利率，以及至少 20 次跨行轉帳優惠。後續只要有證券交易（含豐存股）或換匯達 5000 元，優惠輕鬆延續！
                 </p>
-                <ul class="list-disc list-inside text-sm text-slate-500 space-y-1">
-                    <li>路孚特評分 (Refinitiv) 協助基本面/技術面選股 [cite: 34]。</li>
-                    <li>業界首創美股智慧單，即時掌握庫存損益 [cite: 35]。</li>
-                </ul>
             </div>
-        </div>
 
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 hover:shadow-md transition">
-            <div class="w-full md:w-1/3 flex justify-center">
-                <div class="w-32 h-32 bg-slate-100 rounded-full flex items-center justify-center text-5xl">💻</div>
-            </div>
-            <div class="w-full md:w-2/3">
-                <h3 class="text-2xl font-bold text-slate-900 mb-3">專業交易軟體 ╳ Shioaji Python API</h3>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    重金打造多套穩定下單軟體，更提供期貨專屬 APP 與 SFT 大戶系統，獨立線路確保交易極速 [cite: 64, 68, 69]。針對程式交易者，我們提供專屬的 <span class="text-slate-800 font-bold">Shioaji API</span> [cite: 75]。
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-sinopac-red hover:shadow-xl transition">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">24HR 自動入金與換匯</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    永豐獨有神級功能！只要銀行戶頭有台幣，下單國外期貨或海外債券時，系統會 24 小時自動偵測並換匯入金。國定假日銀行休息也照樣能下單，永遠快人一步！
                 </p>
-                <ul class="list-disc list-inside text-sm text-slate-500 space-y-1">
-                    <li>支援台股、期貨、選擇權自動化下單 [cite: 75]。</li>
-                    <li>團隊提供技術協助，確保串接順暢 [cite: 76]。</li>
-                </ul>
             </div>
-        </div>
 
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 hover:shadow-md transition border-l-8 border-l-sinopac-red">
-            <div class="w-full md:w-1/3 flex justify-center order-first md:order-last">
-                <div class="w-32 h-32 bg-yellow-50 rounded-full flex items-center justify-center text-5xl">🤝</div>
-            </div>
-            <div class="w-full md:w-2/3">
-                <h3 class="text-2xl font-bold text-slate-900 mb-3">實戰團隊支援 ╳ 極具競爭力手續費</h3>
-                <p class="text-slate-600 leading-relaxed mb-4">
-                    我們團隊擁有豐富實務經驗，提供專屬雙線電話，保證交易時刻「絕不忙線」 [cite: 41, 43, 45]。我們以客戶利益為優先，為您爭取最具競爭力的手續費優惠 [cite: 53, 58]。
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-sinopac-red hover:shadow-xl transition">
+                <div class="text-4xl mb-4">🤝</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">全台 45 家分點業務支援</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    線上開戶最怕變更資料變成孤兒！永豐是少數全台連線的券商，舉凡提高百萬額度、當沖保證金減半、變更資料，全台分點皆可就近辦理，不用大老遠跑回原開戶地。
                 </p>
-                <ul class="list-disc list-inside text-sm text-slate-500 space-y-1">
-                    <li>涵蓋證券、複委託、期權、信用戶借貸全業務 [cite: 55]。</li>
-                    <li>遇到特殊行情，提供專業的部位處理建議 [cite: 44, 46]。</li>
-                    <li>豐存股台美股皆享極低門檻手續費優惠 [cite: 80, 81]。</li>
-                </ul>
             </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-sinopac-red hover:shadow-xl transition">
+                <div class="text-4xl mb-4">📈</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">免費美股即時報價 & QI資格</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    免費用戶也能享有 NASDAQ 16大交易所即時報價，告別延遲 15 分鐘！更具備美國國稅局「QI資格」，符合條件之配息自動免預扣 30% 稅款，幫你省下真金白銀。
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-sinopac-red hover:shadow-xl transition">
+                <div class="text-4xl mb-4">📱</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">重金打造的三套專屬 APP</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    大型券商的隱藏價值在於「線路穩定」。我們擁有業界領先的國內外期貨專屬 APP，提供超過三種閃電下單模式與智慧單，行情大波動時絕對不卡頓。
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-sinopac-red hover:shadow-xl transition">
+                <div class="text-4xl mb-4">💰</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">台美股定期定額超低成本</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    業界首創台美雙股息自動再投入功能，實現真正複利！台股定期定額手續費只要 1 元；美股不限金額只收 0.01 美元，單月更有 9 天扣款日讓你平滑成本。
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-gray-800 hover:shadow-xl transition">
+                <div class="text-4xl mb-4">👨‍💻</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Python 程式交易神兵</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    支援永豐 Shioaji API，介面簡單易操作。具備自動化下單、模擬單、即時行情功能。透過我們團隊協助，讓你的量化策略無縫接軌實戰市場。
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-gray-800 hover:shadow-xl transition">
+                <div class="text-4xl mb-4">🏆</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">合理具競爭力的手續費</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    我們絕不玩話術。憑藉龐大的業務量與團隊底氣，直接給您海內外全商品均衡且具競爭力的費率。不貪圖業績，讓您長久且安心地交易。
+                </p>
+            </div>
+
+            <div class="bg-sinopac-dark p-8 rounded-2xl shadow-lg border-t-4 border-sinopac-red hover:shadow-2xl transition">
+                <div class="text-4xl mb-4">📞</div>
+                <h3 class="text-xl font-bold mb-3 text-white">資深團隊，雙專線真人服務</h3>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    我們團隊從業經驗豐富，絕不是找不到人的客服中心。每位客戶皆配置雙專線，遇到極端行情需要判斷時，我們用真槍實彈的經驗為您做最穩固的後盾。
+                </p>
+                <a href="/open_account" class="mt-4 inline-block bg-sinopac-red text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-red-700 transition">立即加入我們</a>
+            </div>
+
         </div>
-
-    </div>
-
-    <div class="max-w-4xl mx-auto text-center mt-16">
-        <a href="/open_account" target="_blank" class="inline-block bg-sinopac-red text-white px-10 py-4 rounded-full font-bold hover:bg-red-700 shadow-xl transition transform hover:-translate-y-1 text-lg">
-            立即啟動線上開戶
-        </a>
     </div>
 </div>
 {% endblock %}

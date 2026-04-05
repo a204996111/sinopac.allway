@@ -45,6 +45,26 @@ def get_single_post(date_str):
         text = f.read()
         html_content = markdown.markdown(text)
         return {"title": date_str, "content": html_content}
+
+# 🚀 讀取外部新聞連結檔的函數
+def get_market_news_links():
+    news_file = os.path.join(BASE_DIR, "market_news.md")
+    if not os.path.exists(news_file):
+        return {}
+    news_data = {}
+    current_date = None
+    with open(news_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith("#"):
+                current_date = line.lstrip("# ").strip()
+                news_data[current_date] = []
+            elif line.startswith("[") and "](" in line and line.endswith(")"):
+                if current_date:
+                    title = line[1:line.find("](")]
+                    url = line[line.find("](")+2:-1]
+                    news_data[current_date].append({"title": title, "url": url})
+    return news_data
 # =======================================
 
 @app.get("/", response_class=HTMLResponse)
@@ -83,11 +103,30 @@ async def about(request: Request):
 async def taitung(request: Request):
     return templates.TemplateResponse(request=request, name="taitung.html")
 
-# 🚀 新增的「最新消息」路由
 @app.get("/news", response_class=HTMLResponse)
 async def news(request: Request):
     return templates.TemplateResponse(request=request, name="news.html")
 
+@app.get("/market_news", response_class=HTMLResponse)
+async def market_news(request: Request):
+    news_data = get_market_news_links()
+    return templates.TemplateResponse(request=request, name="market_news.html", context={"news_data": news_data})
+
+@app.get("/guide", response_class=HTMLResponse)
+async def guide(request: Request):
+    return templates.TemplateResponse(request=request, name="guide.html")
+
+# 🚀 新增：APP 操作教學頁面
+@app.get("/app_tutorial", response_class=HTMLResponse)
+async def app_tutorial(request: Request):
+    return templates.TemplateResponse(request=request, name="app_tutorial.html")
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+
+    
+# ！！！！！！python main.py！！！！！！
+# ！！！！！！python main.py！！！！！！
+# ！！！！！！python main.py！！！！！！
+# python main.py

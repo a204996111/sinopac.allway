@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+{% block title %}開戶流程教學 - 永豐全方way{% endblock %}
+
+{% block content %}
+<div class="bg-slate-50 min-h-screen py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">線上開戶流程教學</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto">準備好雙證件與銀行帳號，跟著下方步驟，手機 15 分鐘即可輕鬆完成線上開戶！</p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100 max-w-5xl mx-auto">
+            <div class="swiper guideSwiper w-full h-full relative">
+                <div class="swiper-wrapper" id="guide-wrapper">
+                    </div>
+                
+                <div class="swiper-pagination !bottom-0"></div>
+                <div class="swiper-button-next !text-sinopac-red hidden md:flex"></div>
+                <div class="swiper-button-prev !text-sinopac-red hidden md:flex"></div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-slate-500 mb-6">準備好開始了嗎？點擊下方按鈕立即啟動線上開戶流程！</p>
+            <a href="/open_account" target="_blank" class="inline-block bg-sinopac-red text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-red-700 transition shadow-lg transform hover:-translate-y-1">
+                🚀 立即線上開戶
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<template id="tpl-slide1">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 1</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">開戶前準備與身分驗證</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    點擊開戶連結後，請先備妥您的「身分證」、「第二證件」以及打算用來扣款的「銀行帳號」。填寫基本資料並勾選同意條款後即可開始！
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open1.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-slide2">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 2</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">手機號碼驗證</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    輸入您的手機號碼，系統將會發送簡訊驗證碼。請確實填寫並完成驗證，以確保您的帳戶安全。
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open2.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-slide3">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 3</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">上傳雙證件</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    請在光源充足處拍攝您的身分證正反面及第二證件。系統會自動辨識資料，請確認反光不會遮擋到文字喔！
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open3.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-slide4">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 4</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">選擇交割銀行</h3>
+                <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                    接下來要設定買賣股票的扣款帳戶。請根據您的情況，點擊下方按鈕選擇您的銀行類型，我們會為您切換接下來的專屬教學步驟：
+                </p>
+                <div class="flex flex-col gap-3">
+                    <button id="btn-yongfeng" onclick="loadFlow('yongfeng')" class="bg-slate-100 text-slate-700 border-2 border-slate-200 px-6 py-4 rounded-xl font-bold hover:border-sinopac-red hover:text-sinopac-red transition w-full shadow-sm text-left flex justify-between items-center group">
+                        <span>🏦 我要綁定【永豐銀行 / 大戶】</span>
+                        <span class="opacity-0 group-hover:opacity-100 transition text-sm">切換步驟 ➔</span>
+                    </button>
+                    <button id="btn-other" onclick="loadFlow('other')" class="bg-slate-100 text-slate-700 border-2 border-slate-200 px-6 py-4 rounded-xl font-bold hover:border-sinopac-red hover:text-sinopac-red transition w-full shadow-sm text-left flex justify-between items-center group">
+                        <span>🏦 我想綁定【其他銀行】</span>
+                        <span class="opacity-0 group-hover:opacity-100 transition text-sm">切換步驟 ➔</span>
+                    </button>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open4.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-slide5y">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 5</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">確認永豐扣款帳號</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    系統會自動帶出您的 DAWHO 數位帳戶或永豐實體帳戶。請分別確認「國內證券」與「海外證券」的扣款帳號，並勾選同意約定條款。
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open5.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-slide6y">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 6</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">填寫基本資料、簽署契約</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    最後一步！請核對您的戶籍與通訊地址，並確認開戶分公司為<strong class="text-sinopac-red">「潮州分公司」</strong>。契約簽署完成並送出審核後就大功告成，恭喜您準備好進入市場了！
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open6.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template id="tpl-slide5o">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 5</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">選擇銀行認證方式</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    使用他行帳戶扣款，您可以選擇「快速認證（登入該銀行的網路銀行）」或「人工認證（上傳手持身分證照片）」。系統支援全台多家大型銀行！
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open7.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-slide6o">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 6</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">上傳存摺封面</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    請選擇您約定的銀行，並上傳該銀行的「存摺封面」照片。請確保照片能清楚看見戶名與帳號，讓系統能順利核對身分。
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open8.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="tpl-slide7o">
+    <div class="swiper-slide pb-12">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left px-4">
+                <span class="text-sinopac-red font-bold text-lg mb-2 block">Step 7</span>
+                <h3 class="text-3xl font-extrabold text-slate-800 mb-4">填寫基本資料</h3>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    最後一步！請核對您的戶籍與通訊地址，並確認開戶分公司為<strong class="text-sinopac-red">「潮州分公司」</strong>。送出審核後就大功告成，恭喜您準備好進入市場了！
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                <div class="w-[280px] h-[580px] bg-slate-800 rounded-[3rem] p-3 shadow-2xl relative border-4 border-slate-300">
+                    <div class="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                        <img src="{{ url_for('static', path='open/open6.jpg') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    // 主要控制邏輯：根據使用者選擇動態切換幻燈片
+    function loadFlow(type) {
+        const wrapper = document.getElementById('guide-wrapper');
+        wrapper.innerHTML = ''; // 清空目前的幻燈片
+        
+        // 輔助函數：將 Template 的內容複製到輪播圖中
+        const appendSlide = (id) => wrapper.appendChild(document.getElementById(id).content.cloneNode(true));
+
+        // 永遠載入共同的前 4 步
+        appendSlide('tpl-slide1');
+        appendSlide('tpl-slide2');
+        appendSlide('tpl-slide3');
+        appendSlide('tpl-slide4');
+
+        // 根據選擇載入後續步驟
+        if (type === 'yongfeng') {
+            appendSlide('tpl-slide5y');
+            appendSlide('tpl-slide6y');
+        } else if (type === 'other') {
+            appendSlide('tpl-slide5o');
+            appendSlide('tpl-slide6o');
+            appendSlide('tpl-slide7o');
+        }
+
+        // 若有選擇特定路線，改變按鈕的外觀讓客戶知道「已選取」
+        if (type !== 'init') {
+            const btnYongfeng = document.getElementById('btn-yongfeng');
+            const btnOther = document.getElementById('btn-other');
+            
+            if (type === 'yongfeng' && btnYongfeng) {
+                btnYongfeng.classList.replace('bg-slate-100', 'bg-sinopac-red');
+                btnYongfeng.classList.replace('text-slate-700', 'text-white');
+                btnYongfeng.classList.replace('border-slate-200', 'border-sinopac-red');
+                btnYongfeng.querySelector('span:last-child').innerText = '✓ 目前路線';
+                btnYongfeng.querySelector('span:last-child').classList.remove('opacity-0');
+            } else if (type === 'other' && btnOther) {
+                btnOther.classList.replace('bg-slate-100', 'bg-slate-800');
+                btnOther.classList.replace('text-slate-700', 'text-white');
+                btnOther.classList.replace('border-slate-200', 'border-slate-800');
+                btnOther.querySelector('span:last-child').innerText = '✓ 目前路線';
+                btnOther.querySelector('span:last-child').classList.remove('opacity-0');
+            }
+        }
+
+        // 重新初始化 Swiper 輪播圖
+        if (window.guideSwiper) window.guideSwiper.destroy(true, true);
+        window.guideSwiper = new Swiper(".guideSwiper", {
+            spaceBetween: 30,
+            autoHeight: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+
+        // 如果不是剛載入網頁，而是點擊了按鈕，就自動幫他滑動到第 5 步
+        if (type !== 'init') {
+            window.guideSwiper.slideTo(4); 
+        }
+    }
+
+    // 網頁剛載入時，預設先載入未選擇的狀態 (只有前4步)
+    document.addEventListener('DOMContentLoaded', () => loadFlow('init'));
+</script>
+{% endblock %}

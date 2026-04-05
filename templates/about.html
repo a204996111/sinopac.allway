@@ -10,24 +10,33 @@
 
 <section class="w-full bg-sky-50 pb-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center gap-16 justify-center">
+        <div class="flex flex-col md:flex-row items-center gap-10 justify-center">
             
             <div class="w-full md:w-4/12 flex justify-center md:justify-end">
-                <div class="w-56 h-56 md:w-64 md:h-64 bg-white rounded-full shadow-sm flex items-center justify-center p-8">
-                    <img src="{{ url_for('static', path='logo.jpg') }}" alt="團隊視覺 Logo" class="w-full h-full object-contain">
+                <div class="w-56 h-56 md:w-64 md:h-64 bg-white rounded-full flex items-center justify-center p-8 border-4 border-white shadow-lg">
+                    <img src="{{ url_for('static', path='logo.png') }}" alt="團隊視覺 Logo" class="w-full h-full object-contain">
                 </div>
             </div>
             
-            <div class="w-full md:w-8/12">
-                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">永豐金證券 <span class="text-sinopac-red">潮州分公司</span></h3>
-                <p class="text-slate-500 font-bold mb-6 text-sm tracking-wider uppercase border-l-4 border-sinopac-red pl-3">數位量化交易團隊</p>
-                <p class="text-slate-700 leading-relaxed mb-8 font-medium text-lg max-w-2xl">
-                    我們是由熟悉程式交易與市場實戰的專業服務團隊組成。結合了量化回測與策略開發，無論您是需要全台線上開戶的數位投資人，還是需要南部在地諮詢的鄉親，我們都能提供雙倍的資源與最即時的服務。
-                </p>
-                <div class="flex flex-wrap gap-3 mb-10">
-                    <span class="bg-white text-slate-700 px-4 py-2 rounded-md text-sm font-bold tracking-wider shadow-sm">台股/海外複委託</span>
-                    <span class="bg-white text-slate-700 px-4 py-2 rounded-md text-sm font-bold tracking-wider shadow-sm">期貨/微台指</span>
-                    <span class="bg-red-50 text-sinopac-red px-4 py-2 rounded-md text-sm font-bold tracking-wider border border-red-100 shadow-sm">量化交易工具</span>
+            <div class="w-full md:w-8/12 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100">
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-1">永豐全方<span class="text-sinopac-red">way</span></h3>
+                <p class="text-slate-500 font-bold mb-5 text-sm tracking-wider uppercase border-l-4 border-sinopac-red pl-3">永豐金證券 潮州分公司</p>
+                
+                <div class="text-slate-700 leading-relaxed mb-6 font-medium text-lg space-y-4">
+                    <p>大家好，我們是永豐全方way團隊，我們是團隊服務，快速不囉嗦，而且一定直接給最優惠的方案！</p>
+                    <p>我們擁有多年的金融從業經驗，擅長股票、期貨、選擇權等多樣金融商品交易，致力於提供最專業的投資服務。無論是投資專業人需要優質的服務體驗，還是投資新手需要簡單有效的規劃，全方way都能量身滿足您的需求。</p>
+                    <ul class="space-y-2 text-base text-slate-600 bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <li><strong class="text-slate-800">24HR 線上開戶：</strong>開戶流程簡便，免出門，有問題能隨時找到我。</li>
+                        <li><strong class="text-slate-800">臨櫃開戶：</strong>全台45家分公司，可協助就近開戶並享後續完整服務。</li>
+                        <li><strong class="text-slate-800">功能強大APP：</strong>提供三套功能強大的APP，全面支援智慧下單與閃電下單。</li>
+                    </ul>
+                    <p class="text-sinopac-red font-bold pt-2">無論您是需要全台線上開戶的數位投資人，還是需要東、南部在地諮詢的鄉親，我們都能提供雙倍的資源與最即時的服務。</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-md text-sm font-bold tracking-wider shadow-sm">台股/海外複委託</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-md text-sm font-bold tracking-wider shadow-sm">期貨</span>
+                    <span class="bg-slate-100 text-slate-700 px-4 py-2 rounded-md text-sm font-bold tracking-wider shadow-sm">基金、債券</span>
                 </div>
             </div>
 
@@ -37,14 +46,11 @@
 
 <section class="w-full bg-white py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div class="text-center mb-16">
             <h3 class="text-3xl font-extrabold text-slate-900">專屬服務與社群</h3>
             <p class="mt-4 text-slate-500 font-medium text-lg">全方位的數位支援，隨時為您解答</p>
         </div>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-            
             <div class="bg-slate-50 p-8 rounded-2xl space-y-8">
                 <div>
                     <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mb-4">Official Contact</p>
@@ -58,21 +64,18 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="pt-4 border-t border-slate-200">
                     <div class="flex items-start">
                         <span class="bg-sinopac-red text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 shadow-sm text-lg mt-1">📍</span>
                         <div>
                             <span class="font-bold text-slate-800 block text-lg mb-1">潮州分公司</span>
-                            <span class="font-medium text-slate-600">920潮州鎮中正路<br>38之1號3樓</span>
+                            <span class="font-medium text-slate-600">920屏東縣潮州鎮中正路<br>38之1號3樓</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
             <div class="space-y-4">
                 <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mb-4 ml-2">Social Media</p>
-                
                 <a href="https://lin.ee/OSyslQw5" target="_blank" class="flex items-center p-4 bg-slate-50 rounded-xl hover:bg-[#00B900]/10 transition group">
                     <span class="bg-[#00B900] text-white w-12 h-12 rounded-lg flex items-center justify-center mr-5 shadow-sm text-2xl font-bold">L</span>
                     <div class="flex-grow">
@@ -81,7 +84,6 @@
                     </div>
                     <span class="text-[#00B900] opacity-0 group-hover:opacity-100 transition font-bold">加入 →</span>
                 </a>
-
                 <a href="https://www.instagram.com/sinopac.allway?igsh=eGJjYTJ2dXF0aGtk&utm_source=qr" target="_blank" class="flex items-center p-4 bg-slate-50 rounded-xl hover:bg-pink-50 transition group">
                     <span class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mr-5 shadow-sm text-2xl font-bold">IG</span>
                     <div class="flex-grow">
@@ -90,7 +92,6 @@
                     </div>
                     <span class="text-pink-500 opacity-0 group-hover:opacity-100 transition font-bold">追蹤 →</span>
                 </a>
-
                 <a href="https://www.facebook.com/share/1GrJBTUX32/?mibextid=wwXIfr" target="_blank" class="flex items-center p-4 bg-slate-50 rounded-xl hover:bg-[#1877F2]/10 transition group">
                     <span class="bg-[#1877F2] text-white w-12 h-12 rounded-lg flex items-center justify-center mr-5 shadow-sm text-3xl font-bold">f</span>
                     <div class="flex-grow">

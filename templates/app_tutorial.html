@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block title %}APP 操作教學 - 永豐全方way{% endblock %}
+
+{% block content %}
+<div class="bg-slate-50 min-h-screen py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">APP 操作教學</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto">請將游標移至手機畫面上的<strong class="text-sinopac-red mx-1">紅點</strong>點擊，認識您的下單武器！</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 mb-16">
+            
+            <div class="relative w-[300px] shrink-0">
+                <img src="{{ url_for('static', path='APP/1.jpg') }}" class="w-full rounded-[2.5rem] shadow-2xl border-[6px] border-slate-800" alt="APP 下單介面">
+                
+                <div class="absolute top-[8%] left-[28%] cursor-pointer group" onclick="showInfo('search')">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-sinopac-red opacity-75 group-hover:animate-ping transition-all"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-sinopac-red border-[3px] border-white shadow-lg"></span>
+                </div>
+
+                <div class="absolute top-[29%] left-[16%] cursor-pointer group" onclick="showInfo('orderType')">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-sinopac-red opacity-75 group-hover:animate-ping transition-all"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-sinopac-red border-[3px] border-white shadow-lg"></span>
+                </div>
+                
+                <div class="absolute top-[29%] left-[56%] cursor-pointer group" onclick="showInfo('price')">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-sinopac-red opacity-75 group-hover:animate-ping transition-all"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-sinopac-red border-[3px] border-white shadow-lg"></span>
+                </div>
+
+                <div class="absolute top-[35%] left-[16%] cursor-pointer group" onclick="showInfo('unitType')">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-sinopac-red opacity-75 group-hover:animate-ping transition-all"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-sinopac-red border-[3px] border-white shadow-lg"></span>
+                </div>
+                
+                <div class="absolute top-[43%] left-[28%] cursor-pointer group" onclick="showInfo('action')">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-sinopac-red opacity-75 group-hover:animate-ping transition-all"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-sinopac-red border-[3px] border-white shadow-lg"></span>
+                </div>
+
+                <div class="absolute top-[66%] left-[50%] -translate-x-1/2 cursor-pointer group" onclick="showInfo('quotes')">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-sinopac-red opacity-75 group-hover:animate-ping transition-all"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-sinopac-red border-[3px] border-white shadow-lg"></span>
+                </div>
+                
+                <div class="absolute bottom-[4.5%] right-[7%] cursor-pointer group" onclick="showInfo('submit')">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-sinopac-red opacity-75 group-hover:animate-ping transition-all"></span>
+                    <span class="relative inline-flex rounded-full h-6 w-6 bg-sinopac-red border-[3px] border-white shadow-lg"></span>
+                </div>
+            </div>
+
+            <div class="w-full md:w-[400px] h-[350px] flex items-center">
+                <div id="info-card" class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 w-full transition-all duration-300 transform scale-100">
+                    <div id="info-icon" class="w-14 h-14 bg-slate-100 text-slate-500 rounded-2xl flex items-center justify-center text-3xl mb-6">👆</div>
+                    <h3 id="info-title" class="text-2xl font-bold text-slate-900 mb-3">請點擊手機上的亮點</h3>
+                    <p id="info-desc" class="text-slate-500 leading-relaxed text-lg">
+                        這裡會顯示該功能的詳細說明與團隊實戰小撇步。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    // 💡 互動亮點的資料庫 (修改文字直接在這裡改)
+    const infoData = {
+        'search': {
+            icon: '🔍',
+            color: 'bg-blue-50 text-blue-600',
+            title: '輸入股票交易代號',
+            desc: '點擊此處可搜尋您想交易的股票代號或名稱。支援台股與各種金融商品快速切換。'
+        },
+        'orderType': {
+            icon: '🏷️',
+            color: 'bg-indigo-50 text-indigo-600',
+            title: '限價/市價 靈活切換',
+            desc: '點擊下拉選單可更改委託價格條件。包含：限價、市價、漲停、跌停、平盤，讓您在不同行情下靈活應對！'
+        },
+        'price': {
+            icon: '💲',
+            color: 'bg-green-50 text-green-600',
+            title: '設定交易價格',
+            desc: '您可以點擊手動輸入限價，或利用右側「＋/－」按鈕快速微調價格。'
+        },
+        'unitType': {
+            icon: '📦',
+            color: 'bg-teal-50 text-teal-600',
+            title: '交易單位(整股/零股)',
+            desc: '不僅能買賣整張股票，點擊此處可切換為「盤中零股」、「盤後定價」或「盤後零股」，小資族也能輕鬆參與大行情！'
+        },
+        'action': {
+            icon: '🔴',
+            color: 'bg-red-50 text-sinopac-red',
+            title: '確認買進或賣出',
+            desc: '防呆設計！紅底代表買進，綠底代表賣出。確認方向後再點擊。'
+        },
+        'quotes': {
+            icon: '📊',
+            color: 'bg-purple-50 text-purple-600',
+            title: '五檔報價自動帶入',
+            desc: '🎯 實戰小技巧：直接點擊畫面上的「最佳五檔報價」，系統就會自動幫您把該價格帶入上方的輸入框，搶單最迅速！'
+        },
+        'submit': {
+            icon: '🚀',
+            color: 'bg-orange-50 text-orange-600',
+            title: '送出委託單',
+            desc: '確認上方所有條件（買賣、價格、張數）無誤後，點擊按鈕即可正式送出您的委託！'
+        }
+    };
+
+    function showInfo(key) {
+        const card = document.getElementById('info-card');
+        const icon = document.getElementById('info-icon');
+        const title = document.getElementById('info-title');
+        const desc = document.getElementById('info-desc');
+        
+        // 卡片縮小變淡動畫
+        card.classList.remove('scale-100');
+        card.classList.add('scale-95', 'opacity-50');
+        
+        setTimeout(() => {
+            const data = infoData[key];
+            
+            // 更換內容
+            icon.innerHTML = data.icon;
+            icon.className = `w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm ${data.color}`;
+            title.innerText = data.title;
+            desc.innerText = data.desc;
+            
+            // 卡片恢復正常動畫
+            card.classList.remove('scale-95', 'opacity-50');
+            card.classList.add('scale-100');
+        }, 150);
+    }
+</script>
+{% endblock %}

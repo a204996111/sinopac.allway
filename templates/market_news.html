@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}市場新聞 - 永豐全方way{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 py-16 min-h-[70vh]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="border-b-2 border-sinopac-red pb-4 mb-10">
+            <h1 class="text-3xl font-black text-gray-900">市場新聞 <span class="text-lg text-gray-500 font-normal">Market News</span></h1>
+        </div>
+        
+        <div class="space-y-6">
+            {% if news_data %}
+                {% for date, items in news_data.items() %}
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" open>
+                    <summary class="cursor-pointer bg-slate-50 px-6 py-4 font-bold text-lg text-slate-800 border-b border-gray-100 flex justify-between items-center list-none [&::-webkit-details-marker]:hidden">
+                        <div class="flex items-center">
+                            <span class="text-sinopac-red mr-3 text-xl">📅</span>
+                            <span>{{ date }}</span>
+                        </div>
+                        <span class="text-slate-400 group-open:rotate-180 transition-transform duration-300">▼</span>
+                    </summary>
+                    <ul class="divide-y divide-gray-100">
+                        {% for item in items %}
+                        <li class="hover:bg-red-50 transition">
+                            <a href="{{ item.url }}" target="_blank" class="flex flex-col md:flex-row md:items-center px-6 py-5">
+                                <span class="text-gray-800 font-bold text-lg hover:text-sinopac-red transition">{{ item.title }}</span>
+                                <span class="md:ml-auto text-gray-400 text-sm mt-2 md:mt-0 whitespace-nowrap">閱讀新聞 ➔</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% endfor %}
+            {% else %}
+                <div class="text-center py-20 text-gray-500">
+                    目前尚未新增任何新聞連結。
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}

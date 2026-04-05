@@ -1,56 +1,86 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 min-h-[75vh]">
     <div class="text-center mb-16">
-        <h2 class="text-3xl font-extrabold text-slate-900">團隊專屬交易工具箱</h2>
-        <p class="mt-4 text-slate-500 text-lg">把複雜的計算與回測，交給我們開發的程式</p>
+        <span class="text-sinopac-red font-bold tracking-widest uppercase text-sm mb-2 block">Exclusive Financial Tools</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">團隊專屬交易工具箱</h2>
+        <p class="mt-4 text-slate-500 text-lg max-w-2xl mx-auto">
+            把複雜的計算交給程式！我們開發了多款實用的財經小幫手，目前全面開放免費體驗。
+        </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden flex flex-col hover:shadow-lg transition duration-300">
-            <div class="bg-[#111827] p-6 border-b-4 border-sinopac-red">
-                <h3 class="text-xl font-bold text-white flex items-center">
-                    <span class="mr-2">🧮</span> 股票損益與成本計算神器
-                </h3>
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group relative flex flex-col">
+            <div class="absolute top-4 right-4 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full flex items-center shadow-sm z-10">
+                <span class="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span> 免費使用
             </div>
-            <div class="p-8 flex-grow flex flex-col justify-between">
-                <div>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        精準計算包含手續費折扣、證交稅在內的真實交易成本。介面簡單直觀，就連長輩也能輕鬆上手。只需輸入買進價格，系統自動算出「損益兩平點」，讓您清楚知道賣在什麼價位才不會賠錢。
-                    </p>
+            <div class="p-8 pb-6 flex-grow">
+                <div class="w-14 h-14 bg-red-50 text-sinopac-red rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                    🧮
                 </div>
-                <a href="https://mom-stock.onrender.com/" target="_blank" class="w-full text-center bg-slate-100 text-slate-800 py-3 rounded-lg font-bold hover:bg-slate-200 transition border border-slate-300">
-                    開啟計算神器 ↗
+                <h3 class="text-xl font-bold text-slate-900 mb-3">股票損益與成本計算機</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    精準計算手續費折扣、證交稅等真實成本，輸入價位一秒算出損益兩平點，讓您清楚知道賣在什麼價位才不會賠錢。
+                </p>
+            </div>
+            <div class="px-8 pb-8 mt-auto">
+                <a href="https://mom-stock.onrender.com/" target="_blank" class="block w-full text-center bg-slate-50 text-sinopac-red font-bold py-3 rounded-xl hover:bg-sinopac-red hover:text-white transition border border-red-50 shadow-sm">
+                    立即開啟體驗
                 </a>
             </div>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden flex flex-col hover:shadow-lg transition duration-300">
-            <div class="bg-[#111827] p-6 border-b-4 border-sinopac-red">
-                <h3 class="text-xl font-bold text-white flex items-center">
-                    <span class="mr-2">📈</span> 智慧策略回測系統
-                </h3>
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group relative flex flex-col">
+            <div class="absolute top-4 right-4 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full flex items-center shadow-sm z-10">
+                <span class="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span> 免費使用
             </div>
-            <div class="p-8 flex-grow flex flex-col justify-between">
-                <div>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        不再憑感覺下單。這套我們自行開發的回測系統，整合了 MACD、RSI、EMA 等多項技術指標。透過歷史數據驗證，幫您找出微台指與台股市場中的交易慣性，建立更穩定的進出場濾網。
-                    </p>
+            <div class="p-8 pb-6 flex-grow">
+                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                    🎟️
                 </div>
-                <a href="https://allstock.onrender.com/" target="_blank" class="w-full text-center bg-slate-100 text-slate-800 py-3 rounded-lg font-bold hover:bg-slate-200 transition border border-slate-300">
-                    進入回測系統 ↗
+                <h3 class="text-xl font-bold text-slate-900 mb-3">股票申購(抽籤)預估獲利</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    快速查詢最新申購標的！輸入目前市價與申購價，一秒試算「潛在獲利金額」與「溢價差報酬率」，股市抽紅包不盲目。
+                </p>
+            </div>
+            <div class="px-8 pb-8 mt-auto">
+                <a href="https://a204996111.github.io/sinopac-allway_Stock-Subscription/" target="_blank" class="block w-full text-center bg-slate-50 text-blue-600 font-bold py-3 rounded-xl hover:bg-blue-600 hover:text-white transition border border-blue-50 shadow-sm">
+                    立即開啟體驗
                 </a>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group relative flex flex-col">
+            <div class="absolute top-4 right-4 bg-slate-100 text-slate-500 text-xs font-bold px-3 py-1 rounded-full flex items-center shadow-sm z-10">
+                即將推出
+            </div>
+            <div class="p-8 pb-6 flex-grow opacity-60">
+                <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                    🌱
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">存股定期定額複利試算</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    每個月存 5000 元，十年後會變多少？用視覺化圖表帶你體驗時間與複利結合的強大威力。
+                </p>
+            </div>
+            <div class="px-8 pb-8 mt-auto">
+                <button disabled class="block w-full text-center bg-slate-50 text-slate-400 font-bold py-3 rounded-xl border border-slate-100 cursor-not-allowed">
+                    小工具持續上架中...
+                </button>
             </div>
         </div>
 
     </div>
 
-    <div class="mt-16 bg-red-50 border border-red-100 rounded-xl p-8 text-center max-w-3xl mx-auto">
-        <p class="text-sinopac-red font-bold text-lg mb-2">想體驗更多進階交易功能？</p>
-        <p class="text-slate-700 mb-6">現在透過永豐全方way團隊開戶，免費獲取最新開發的 VIP 交易工具與策略教學！</p>
-        <a href="/open_account" target="_blank" class="inline-block bg-sinopac-red text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition shadow">
+    <div class="mt-16 bg-slate-900 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto shadow-xl">
+        <span class="bg-sinopac-red text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">解鎖完整權限</span>
+        <h3 class="text-2xl font-bold text-white mb-3">想體驗更多 VIP 獨家工具？</h3>
+        <p class="text-slate-400 mb-8 max-w-2xl mx-auto">
+            包含融資維持率斷頭試算、選擇權結算試算等進階功能。加 LINE 開戶成為全方way客戶，即可領取專屬解鎖密碼！
+        </p>
+        <a href="/open_account" target="_blank" class="inline-block bg-sinopac-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow text-lg">
             立即線上開戶
         </a>
     </div>

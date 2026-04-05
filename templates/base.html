@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}永豐全方way{% endblock %}</title>
     
-    <link rel="icon" type="image/x-icon" href="https://www.sinotrade.com.tw/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.sinotrade.com.tw/favicon.ico">
+    <link rel="icon" type="image/png" href="/static/logo.png">
+    <link rel="shortcut icon" type="image/png" href="/static/logo.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
                 <div class="flex items-center flex-shrink-0 py-1">
                     <a href="/" class="flex items-center group">
                         <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 mr-3 shadow-lg group-hover:scale-105 transition">
-                            <img src="{{ url_for('static', path='logo.jpg') }}" alt="永豐全方way Logo" class="w-full h-full object-contain">
+                            <img src="{{ url_for('static', path='logo.png') }}" alt="永豐全方way Logo" class="w-full h-full object-contain">
                         </div>
                         <div class="flex flex-col justify-center">
                             <span class="text-2xl font-bold text-white tracking-wider leading-none mb-1">永豐全方way</span>
@@ -49,23 +49,16 @@
                     <a href="/tools" class="text-white hover:text-sinopac-red font-bold tracking-wide transition flex items-center">專屬工具</a>
                     <a href="/strategy" class="text-white hover:text-sinopac-red font-bold tracking-wide transition flex items-center">策略觀念</a>
                     
-                    <div class="relative group flex items-center h-20 cursor-pointer">
-                        <span class="text-white group-hover:text-sinopac-red font-bold tracking-wide transition flex items-center">
-                            市場消息 <span class="ml-1 text-sm">▼</span>
-                        </span>
-                        <div class="absolute top-[70px] left-1/2 -translate-x-1/2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden border-t-4 border-sinopac-red text-base">
-                            <a href="#" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">市場消息</a>
-                            <a href="/market" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold transition">每日分享簡報</a>
-                        </div>
-                    </div>
+                    <a href="/market_news" class="text-white hover:text-sinopac-red font-bold tracking-wide transition flex items-center h-20">市場新聞</a>
                     
                     <div class="relative group flex items-center h-20 cursor-pointer">
                         <span class="text-white group-hover:text-sinopac-red font-bold tracking-wide transition flex items-center">
                             客戶支援 <span class="ml-1 text-sm">▼</span>
                         </span>
                         <div class="absolute top-[70px] left-1/2 -translate-x-1/2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden border-t-4 border-sinopac-red text-base">
-                            <a href="/news" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">最新消息</a>
-                            <a href="#" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">APP操作教學</a>
+                            <a href="/news" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">最新活動</a>
+                            <a href="/guide" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">開戶流程教學</a>
+                            <a href="/app_tutorial" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">APP操作教學</a>
                             <a href="https://www.sinotrade.com.tw/newweb/customer-support/question/?key=1" target="_blank" class="block px-5 py-3 text-slate-700 hover:bg-slate-50 hover:text-sinopac-red font-bold border-b border-slate-100 transition">基本問題</a>
                             <a href="/taitung" class="block px-5 py-3 bg-red-50 text-sinopac-red hover:bg-red-100 font-bold transition flex items-center justify-between">
                                 台東專區 <span class="text-[10px] bg-sinopac-red text-white px-2 py-0.5 rounded-full tracking-wider">HOT</span>
@@ -91,17 +84,13 @@
                 <a href="/why_sinopac" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">永豐金優勢</a>
                 <a href="/tools" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">專屬工具</a>
                 <a href="/strategy" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">策略觀念</a>
+                <a href="/market_news" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition">市場新聞</a>
                 
                 <div class="border-t border-gray-800 pt-3 mt-3">
-                    <div class="px-4 py-1 text-gray-500 text-[11px] tracking-widest">市場消息</div>
-                    <a href="#" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">市場消息</a>
-                    <a href="/market" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">每日分享簡報</a>
-                </div>
-
-                <div class="border-t border-gray-800 pt-3 mt-3">
                     <div class="px-4 py-1 text-gray-500 text-[11px] tracking-widest">客戶支援</div>
-                    <a href="/news" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">最新消息</a>
-                    <a href="#" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">APP操作教學</a>
+                    <a href="/news" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">最新活動</a>
+                    <a href="/guide" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">開戶流程教學</a>
+                    <a href="/app_tutorial" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">APP操作教學</a>
                     <a href="https://www.sinotrade.com.tw/newweb/customer-support/question/?key=1" target="_blank" class="block px-4 py-3 text-white hover:text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8">基本問題</a>
                     <a href="/taitung" class="block px-4 py-3 text-sinopac-red hover:bg-gray-800 rounded-lg font-bold transition pl-8 flex justify-between items-center">
                         台東專區 <span class="bg-sinopac-red text-white text-[10px] px-2 py-0.5 rounded-full">HOT</span>
@@ -112,7 +101,6 @@
     </nav>
 
     <div class="fixed bottom-6 right-4 md:right-6 z-50 flex flex-col items-end">
-        
         <div id="fab-menu" class="hidden flex-col gap-3 transition-all duration-300 opacity-0 mb-4 origin-bottom scale-90">
             <a href="#top" class="bg-slate-700 text-white w-12 h-12 rounded-full flex flex-col items-center justify-center shadow-lg hover:scale-110 transition-transform">
                 <span class="text-lg font-black leading-none mt-1">↑</span>
@@ -127,12 +115,12 @@
                 <span class="text-xl">📞</span>
             </a>
         </div>
-
         <button id="fab-toggle" class="bg-sinopac-dark text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-slate-800 transition-transform hover:scale-105 focus:outline-none ring-4 ring-white/30">
             <svg id="fab-icon-chat" class="w-7 h-7 absolute transition-all duration-300 transform scale-100 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
             <svg id="fab-icon-close" class="w-7 h-7 absolute transition-all duration-300 transform scale-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
     </div>
+
     <main class="pt-20 flex-grow"> 
         {% block content %}{% endblock %}
     </main>
@@ -161,7 +149,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="border-t border-gray-800 pt-8 mb-8">
                 <h4 class="text-sinopac-red font-bold text-sm mb-4">【交易風險與免責聲明】</h4>
                 <ul class="list-disc pl-5 space-y-2 text-xs text-gray-400 leading-relaxed md:text-[13px]">
@@ -172,7 +159,6 @@
                     <li>各項作業準則與規定，悉依永豐金證券及永豐期貨最新官方公告為準，本站資訊僅供交流參考。</li>
                 </ul>
             </div>
-
             <div class="flex flex-col md:flex-row justify-between text-xs text-gray-500 border-t border-gray-800 pt-6">
                 <p>主管機關核准字號：<span class="text-gray-400">113年金管證總字第0044號(永豐金證券) ｜ 111年金管期總字第007號(委任期貨商永豐期貨)</span></p>
                 <p class="mt-2 md:mt-0 text-gray-400">ALL RIGHTS RESERVED. 永豐全方WAY TEAM</p>
@@ -183,7 +169,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // 輪播圖設定
             if (document.querySelector('.mySwiper')) {
                 var swiper = new Swiper(".mySwiper", {
                     spaceBetween: 0,
@@ -195,8 +180,6 @@
                     loop: true
                 });
             }
-
-            // 手機版頂部漢堡選單邏輯
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileBtn && mobileMenu) {
@@ -210,35 +193,26 @@
                     }
                 });
             }
-
-            // 🚀 右下角懸浮按鈕 (FAB) 展開/收合邏輯
             const fabToggle = document.getElementById('fab-toggle');
             const fabMenu = document.getElementById('fab-menu');
             const iconChat = document.getElementById('fab-icon-chat');
             const iconClose = document.getElementById('fab-icon-close');
-
             if(fabToggle && fabMenu) {
                 fabToggle.addEventListener('click', () => {
                     if (fabMenu.classList.contains('hidden')) {
-                        // 展開
                         fabMenu.classList.remove('hidden');
-                        setTimeout(() => {
-                            fabMenu.classList.remove('opacity-0', 'scale-90');
-                        }, 10);
+                        setTimeout(() => { fabMenu.classList.remove('opacity-0', 'scale-90'); }, 10);
                         iconChat.classList.replace('scale-100', 'scale-0');
                         iconChat.classList.replace('rotate-0', '-rotate-90');
                         iconClose.classList.replace('scale-0', 'scale-100');
                         iconClose.classList.replace('rotate-90', 'rotate-0');
                     } else {
-                        // 收合
                         fabMenu.classList.add('opacity-0', 'scale-90');
                         iconChat.classList.replace('scale-0', 'scale-100');
                         iconChat.classList.replace('-rotate-90', 'rotate-0');
                         iconClose.classList.replace('scale-100', 'scale-0');
                         iconClose.classList.replace('rotate-0', 'rotate-90');
-                        setTimeout(() => {
-                            fabMenu.classList.add('hidden');
-                        }, 300); // 等待動畫播完再隱藏
+                        setTimeout(() => { fabMenu.classList.add('hidden'); }, 300);
                     }
                 });
             }

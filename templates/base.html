@@ -31,14 +31,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20 w-full"> 
                 
-                <div class="flex items-center flex-shrink-0 py-1">
-                    <a href="/" class="flex items-center group">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 mr-3 shadow-lg group-hover:scale-105 transition">
+                <div class="flex items-center flex-shrink-1 py-1 min-w-0">
+                    <a href="/" class="flex items-center group overflow-hidden">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center p-1.5 md:mr-3 mr-2 shadow-lg group-hover:scale-105 transition shrink-0">
                             <img src="{{ url_for('static', path='logo.png') }}" alt="永豐全方way Logo" class="w-full h-full object-contain">
                         </div>
-                        <div class="flex flex-col justify-center">
-                            <span class="text-2xl font-bold text-white tracking-wider leading-none mb-1">永豐全方way</span>
-                            <span class="text-[10px] font-bold text-white tracking-widest uppercase leading-none">sinopac.allway</span>
+                        <div class="flex flex-col justify-center min-w-0">
+                            <span class="text-lg md:text-2xl font-bold text-white tracking-wider leading-none mb-1 truncate">永豐全方way</span>
+                            <span class="text-[9px] md:text-[10px] font-bold text-white tracking-widest uppercase leading-none truncate">sinopac.allway</span>
                         </div>
                     </a>
                 </div>
@@ -67,11 +67,11 @@
                     </div>
                 </div>
 
-                <div class="flex items-center flex-shrink-0">
-                    <a href="/open_account" target="_blank" class="bg-sinopac-red text-white px-6 py-2 rounded-full font-bold tracking-wide shadow-md hover:bg-red-700 transition transform hover:scale-105 text-lg">
+                <div class="flex items-center flex-shrink-0 ml-2">
+                    <a href="/open_account" target="_blank" class="bg-sinopac-red text-white px-4 py-1.5 md:px-6 md:py-2 rounded-full font-bold tracking-wide shadow-md hover:bg-red-700 transition transform hover:scale-105 text-sm md:text-lg whitespace-nowrap">
                         線上開戶
                     </a>
-                    <button id="mobile-menu-btn" class="lg:hidden ml-4 text-white hover:text-sinopac-red focus:outline-none transition">
+                    <button id="mobile-menu-btn" class="lg:hidden ml-2 md:ml-4 text-white hover:text-sinopac-red focus:outline-none transition shrink-0">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>

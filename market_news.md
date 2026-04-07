@@ -1,7 +1,36 @@
+# 2026/04/07
+
+[〈美股盤後〉標普連四紅 市場寄望美伊最後關頭停火](https://news.cnyes.com/news/id/6408305)
+[川普再發威脅：若伊朗不在7日20時前投降 將攻擊民用設施](https://news.cnyes.com/news/id/6408381)
+[金價回落信號？買黃金主力央行 開始賣黃金了](https://news.cnyes.com/news/id/6408396)
+[路透：SpaceX周一向銀行團詳述IPO計畫細節 6月8日當周啟動上市路演](https://news.cnyes.com/news/id/6408780)
+
+# 2026/04/06
+
+[伊朗回應美方停戰方案 提出10項條款](https://news.cnyes.com/news/id/6408199)
+[摩根大通CEO預警：油價攀升恐在今年觸發經濟衰退 並催生熊市](https://news.cnyes.com/news/id/6408185)
+[美國、伊朗停火有望！傳正討論「為期45天」停火條款、日韓股市高開高走](https://news.cnyes.com/news/id/6407892)
+[中國為何對油價飆漲最「抗震」？高盛揭原因](https://news.cnyes.com/news/id/6407547)
+
+# 2026/04/05
+
+[川普再次放話：4/7將是伊朗發電廠日、大橋日](https://news.cnyes.com/news/id/6407714)
+[本週操盤筆記：美國3月CPI、Fed會議紀錄](https://news.cnyes.com/news/id/6406533)
+[《經濟學人》伊朗戰爭演變成「亞洲危機」 面臨「三大挑戰」](https://news.cnyes.com/news/id/6407551)
+
+# 2026/04/04
+
+[川普再對伊朗下48小時最後通牒！伊朗強硬回應](https://news.cnyes.com/news/id/6407446)
+[避險資金湧入中國！全球拋售900億美債 中國國債與人民幣資產受熱捧](https://news.cnyes.com/news/id/6407356)
+[美投資級債券基金失血 創「解放日」關稅以來最大撤資紀錄](https://news.cnyes.com/news/id/6406605)
+
 # 2026/04/03
 
 [特斯拉重挫逾5%陷2026最大跌幅 交車輛連兩季不如預期](https://news.cnyes.com/news/id/6406615)
 [光通訊與CPO產業重點整理、以及投資決策導向概覽分析(一)](https://news.cnyes.com/news/id/6406204)
+[戰後首見LNG船闖關 荷姆茲海峽迎三艘能源船通行](https://news.cnyes.com/news/id/6406588)
+[川普祭出藥品關稅100% 台灣無豁免](https://news.cnyes.com/news/id/6406727)
+[非農就業強勢反彈！3月新增17.8萬創近一年新高、Fed利率按兵不動機率99.5%](https://news.cnyes.com/news/id/6406971)
 
 # 2026/04/02
 

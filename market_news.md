@@ -1,3 +1,9 @@
+# 2026/04/08
+[川普同意停火兩周！道瓊期跳漲700點、西德州暴跌逾9%](https://news.cnyes.com/news/id/6409939)
+[川普最後一刻同意停火兩周！伊朗接受提案 WTI暴跌17%](https://news.cnyes.com/news/id/6409959)
+[伊朗外長凌晨宣布：未來兩周 船隻將能安全通過荷姆茲海峽](https://news.cnyes.com/news/id/6409983)
+[Fed古爾斯比：伊朗戰爭恐引發停滯性通膨衝擊 使Fed陷入兩難](https://news.cnyes.com/news/id/6409913)
+
 # 2026/04/07
 
 [〈美股盤後〉標普連四紅 市場寄望美伊最後關頭停火](https://news.cnyes.com/news/id/6408305)

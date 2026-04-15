@@ -6,25 +6,25 @@
 []()
 
 # 2026/04/14
-[]()
-[]()
-[]()
-[]()
-[]()
+[為什麼SpaceX IPO會對特斯拉股價形成壓力？](https://news.cnyes.com/news/id/6419261)
+[台積電創2050元新天價 市值衝上53兆元 帶動台股總市值衝破118兆元](https://news.cnyes.com/news/id/6419969)
+[Fed政策添變數！美3月PPI僅升0.5% 能源衝擊未全面擴散](https://news.cnyes.com/news/id/6420653)
+[停火期限逼近！美伊擬重啟談判 白宮：第二輪對話仍在討論](https://news.cnyes.com/news/id/6420757)
+[〈車用電子展〉台灣車電產值衝6600億！經部TARC主秀氫能大巴加氫15分鐘跑420公里](https://news.cnyes.com/news/id/6420010)
 
 # 2026/04/13
-[]()
-[]()
-[]()
-[]()
-[]()
+[史上單月最大跌幅！OPEC三月原油產量暴跌27% 「這一國」月減61%最多](https://news.cnyes.com/news/id/6419081)
+[2000 元大關只是起點？台積電 4/16 法說會將點燃的『核彈級』利多！](https://news.cnyes.com/news/id/6418718)
+[國發基金申讓出脫持股 聯合再生：其階段性任務已達成](https://news.cnyes.com/news/id/6418698)
+[富邦NASDAQ分割投票開跑4/27截止 降低入手門檻提升流動性](https://news.cnyes.com/news/id/6418600)
+[川普：美軍封鎖伊朗後 美國將大賣石油](https://news.cnyes.com/news/id/6418491)
 
 # 2026/04/12
-[]()
-[]()
-[]()
-[]()
-[]()
+[本週操盤筆記：美股Q1財報季登場、高油價連鎖效應、戰事成關鍵變數](https://news.cnyes.com/news/id/6416901)
+[經濟學人》日本汽車業陷結構性危機 產業競爭力正快速流失？](https://news.cnyes.com/news/id/6417286)
+[〈台股風向球〉衝破歷史高點在望 台積電法說促多頭接力賽](https://news.cnyes.com/news/id/6417567)
+[肥料燃料雙漲衝擊稻作！東南亞稻農陷「棄收、減種」困境 ](https://news.cnyes.com/news/id/6417336)
+[美艦試圖通過荷姆茲海峽！伊朗： 企圖製造「成功通行」虛假宣傳 並影響在巴基斯坦的談判](https://news.cnyes.com/news/id/6417844)
 
 # 2026/04/11
 [美伊已開始直接會談！伊朗外交部：隨時準備應對違反停火行為](https://news.cnyes.com/news/id/6417489)

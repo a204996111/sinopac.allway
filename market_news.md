@@ -1,3 +1,52 @@
+# 2026/04/15
+[]()
+[]()
+[]()
+[]()
+[]()
+
+# 2026/04/14
+[]()
+[]()
+[]()
+[]()
+[]()
+
+# 2026/04/13
+[]()
+[]()
+[]()
+[]()
+[]()
+
+# 2026/04/12
+[]()
+[]()
+[]()
+[]()
+[]()
+
+# 2026/04/11
+[美伊已開始直接會談！伊朗外交部：隨時準備應對違反停火行為](https://news.cnyes.com/news/id/6417489)
+[塑膠袋不「荒」了！中油台塑聯手給力 下周12.5億個塑袋鋪貨全國1350個商圈市場](https://news.cnyes.com/news/id/6417391)
+[SCFI連三紅！波斯灣航線運價首度突破4000美元 寫「史上最貴」](https://news.cnyes.com/news/id/6417161)
+[私募信貸面臨壓力測試！標普道瓊推新型CDS指數 釋放看空動能](https://news.cnyes.com/news/id/6417191)
+[為何能源價格飆升 Fed仍可能按兵不動？](https://news.cnyes.com/news/id/6417171)
+
+# 2026/04/10
+[Meta剛砸210億美元又添合作！CoreWeave與Anthropic簽長約 股價勁揚](https://news.cnyes.com/news/id/6416831)
+[〈美股早盤〉美3月CPI符合預期、市場聚焦美伊動態 主要指數走高](https://news.cnyes.com/news/id/6416767)
+[一年來最大拋售訊號！美股反彈遭倒貨 散戶在怕什麼？](https://news.cnyes.com/news/id/6416771)
+[川普全球10%關稅政策惹議 美國貿易法院今開庭審理](https://news.cnyes.com/news/id/6416769)
+[標普、那指連七紅！專家示警：停火協議樂觀情緒可能「跑太快」](https://news.cnyes.com/news/id/6414603)
+
+# 2026/04/09
+[〈美股早盤〉美伊停火疑慮推升油價 主要指數走低](https://news.cnyes.com/news/id/6414229)
+[能源與外交角力！中國從旁觀到介入 美伊停火背後的權力轉移](https://news.cnyes.com/news/id/6414246)
+[1785家已公告股利 平均殖利率3.8% 37家配息「從無到有」記憶體族群佔大宗](https://news.cnyes.com/news/id/6414243)
+[川普再出招！擬用緊急法對伊朗課關稅](https://news.cnyes.com/news/id/6414456)
+[台新元富證合併後APP異常 金管會：已通報重大偶發 責成證交所查核](https://news.cnyes.com/news/id/6414441)
+
 # 2026/04/08
 [川普同意停火兩周！道瓊期跳漲700點、西德州暴跌逾9%](https://news.cnyes.com/news/id/6409939)
 [川普最後一刻同意停火兩周！伊朗接受提案 WTI暴跌17%](https://news.cnyes.com/news/id/6409959)

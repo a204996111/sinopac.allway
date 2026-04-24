@@ -1,23 +1,30 @@
+# 2026/04/24
+[〈台經院景氣預測〉製造業3月營業氣候連2跌 對未來半年樂觀程度略降](https://news.cnyes.com/news/id/6431668)
+[能源通膨來襲！日本3月核心CPI五個月首見加速 支持日銀「漸進升息」路徑](https://news.cnyes.com/news/id/6431440)
+[川普坦言油價維持高檔 民調顯示美國8成民眾縮減支出](https://news.cnyes.com/news/id/6431056)
+[歐洲央行要升息了？關鍵時間點曝光](https://news.cnyes.com/news/id/6430714)
+[〈台股盤前要聞〉3萬9關前爆天量大洗盤、外資轉賣仍力挺台積電聯發科](https://news.cnyes.com/news/id/6430937)
+
 # 2026/04/23
-[]()
-[]()
-[]()
-[]()
-[]()
+[台股創高後翻黑爆天量！誰才是下一波真正領頭羊？](https://news.cnyes.com/news/id/6430492)
+[IPO前SpaceX提600億美元收購Cursor 馬斯克打什麼算盤？](https://news.cnyes.com/news/id/6429832)
+[通膨壓力升溫？美國4月PMI回升 企業掀「恐慌採購」潮](https://news.cnyes.com/news/id/6430889)
+[美上周初領失業金人數小幅上升 就業市場未見明顯惡化](https://news.cnyes.com/news/id/6430685)
+[伊朗：荷姆茲海峽「首筆通行費」已入帳央行](https://news.cnyes.com/news/id/6430781)
 
 # 2026/04/22
-[]()
-[]()
-[]()
-[]()
-[]()
+[SK海力士砸19兆韓元在清州蓋新廠 擴大先進封裝產能搶攻AI商機](https://news.cnyes.com/news/id/6429061)
+[小摩看多中國！房市回暖＋AI紅利加持 股市有望超車新興市場](https://news.cnyes.com/news/id/6429001)
+[一圖看懂油市巨震：美伊戰爭時間線拆解＋油價後市展望](https://news.cnyes.com/news/id/6428251)
+[〈台股盤前要聞〉台股飛上天 千金股發威 市值排名大洗牌、外銷訂單衝破900億美元](https://news.cnyes.com/news/id/6428281)
+[估值超200億美元！傳阿里巴巴與騰訊洽談投資DeepSeek 阿里美股盤前大漲逾2%](https://news.cnyes.com/news/id/6429574)
 
 # 2026/04/21
-[]()
-[]()
-[]()
-[]()
-[]()
+[中國車市又見價格戰 70款車型集體降價](https://news.cnyes.com/news/id/6427749)
+[台股市值前20大洗牌！這3檔黑馬股一路狂飆刷榜 金控三雄排名節節敗退](https://news.cnyes.com/news/id/6427839)
+[停火大限將至！川普點出炸伊設施挖濃縮鈾難處 開戰迄今美軍415傷13死 伊朗逾3400平民亡](https://news.cnyes.com/news/id/6427745)
+[〈台股盤後〉千金股比價效應帶飛台股大漲646點改寫37605點收盤新高](https://news.cnyes.com/news/id/6427633)
+[美股比想像強！川普：原以為會崩20%結果撐住了](https://news.cnyes.com/news/id/6428155)
 
 # 2026/04/20
 [印度與南韓深化戰略夥伴關係 設定2030年500億美元貿易目標](https://news.cnyes.com/news/id/6426561)
